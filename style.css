@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to right, rgb(45, 189, 165),rgb(28, 150, 129));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo__alert{
+    height: 40px;
+    width: 500px;
+    top: -100%;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.todo__h1{
+    font-size: 50px;
+    color: #fff;
+    margin: 40px 0;
+}
+
+.todo__container{
+    width: 500px;
+}
+
+.todo__inputContainer{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.todo__input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    
+   
+}
+.todo__addButton{
+    width: 20%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(138, 138, 138);
+    color: #fff;
+    font-size: 25px;
+}
+
+.todo__lists{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    
+    
+}
+
+.todo__singleTodoContainer{
+    display: flex;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: newTodoAnimation 0.3s ease-out;
+    
+}
+
+.todo__todo{
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todo__deleteButton{
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    background-color: rgb(226, 35, 35);
+}
+
+
+@keyframes alertAnimation{
+    0%{
+        top: 0;
+    }
+    5%{
+        top: 25px;
+    }
+    10%{
+        top: -15px;
+    }
+    15%{
+        top: 10px;
+    }
+    20%{
+        top: -5px;
+    }
+    25%{
+        top: 0;
+    }
+    100%{
+        top: 0;
+    }
+
+}
+
+
+@keyframes newTodoAnimation{
+    0%{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes deleteTodoAnimation{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .todo__h1{
+        font-size: 45px;
+    }
+    .todo__container{
+        width: 400px;
+    }
+    .todo__alert{
+        width: 400px;
+}
+}
+@media only screen and (max-width: 450px){
+    .todo__h1{
+        font-size: 40px;
+    }
+    .todo__container{
+        width: 300px;
+    }
+    .todo__alert{
+        width: 300px;
+}
+}
+@media only screen and (max-width: 350px){
+    .todo__h1{
+        font-size: 35px;
+    }
+    .todo__container{
+        width: 200px;
+    }
+    .todo__alert{
+        width: 200px;
+}
+}
